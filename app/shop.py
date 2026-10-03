@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 
 
 class Shop:
@@ -26,9 +26,12 @@ class Shop:
         total = self.get_products_cost(product_cart)
 
         print()
-        print(f"Date: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+        print(
+            f"Date: "
+            f"{datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}"
+        )
         print(f"Thanks, {customer_name}, for your purchase!")
-        print("You have bought: ")
+        print("You have bought:")
 
         for product, amount in product_cart.items():
             cost = self.products[product] * amount
