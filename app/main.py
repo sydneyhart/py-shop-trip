@@ -66,15 +66,4 @@ def shop_trip() -> None:
                 f"money to make a purchase in any shop"
             )
 
-        if customer.money >= cheapest_cost:
-            customer.make_purchase(
-                cheapest_shop,
-                cheapest_cost,
-            )
-        else:
-            print(
-                f"{customer.name} doesn't have enough "
-                f"money to make a purchase in any shop"
-            )
-        
-        print()  # Add this line to print a blank line after each customer
+        print()
