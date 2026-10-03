@@ -30,7 +30,7 @@ def shop_trip() -> None:
         for customer in config["customers"]
     ]
 
-    for customer in customers:
+    for index, customer in enumerate(customers):
         print(
             f"{customer.name} has "
             f"{customer.money:g} dollars"
@@ -66,4 +66,5 @@ def shop_trip() -> None:
                 f"money to make a purchase in any shop"
             )
 
-        print()
+        if index < len(customers) - 1:
+            print()
